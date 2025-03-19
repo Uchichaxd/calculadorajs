@@ -1,0 +1,81 @@
+.calculator {
+    max-width: 320px;
+    margin: 40px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    background: linear-gradient(135deg, #fafafa, #e0e0e0); /* Colores más suaves */
+    font-family: 'Poppins', sans-serif; /* Tipografía moderna */
+}
+
+#screen {
+    width: 95%;
+    margin-bottom: 15px;
+    padding: 20px;
+    font-size: 30px; /* Aumentar el tamaño de la fuente */
+    text-align: right;
+    border-radius: 10px;
+    box-shadow: inset 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    background-color: #f4f4f4; /* Fondo más claro */
+    color: #333; /* Color de texto más oscuro */
+    letter-spacing: 1px;
+    min-height: 60px; /* Asegura que la pantalla sea lo suficientemente alta para los números */
+    overflow-x: hidden; /* Evita el desbordamiento horizontal si el número es largo */
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.buttons button {
+    padding: 18px;
+    font-size: 22px; /* Aumenta ligeramente el tamaño de fuente */
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.buttons button:hover {
+    transform: scale(1.05); /* Efecto de escala para resaltar el hover */
+    background-color: #f0f0f0;
+}
+
+.buttons button:active {
+    transform: scale(0.98); /* Reduce ligeramente el tamaño al hacer clic */
+    background-color: #e0e0e0;
+}
+
+.buttons .operator {
+    background-color: #ff7f50; /* Un naranja más suave */
+    color: #fff;
+}
+
+.buttons .operator:hover {
+    background-color: #ff6347; /* Naranja más oscuro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+.buttons .operator:active {
+    background-color: #e65c00; /* Naranja más oscuro al hacer clic */
+    transform: scale(0.98);
+}
+
+/* Responsividad */
+@media (max-width: 400px) {
+    .calculator {
+        max-width: 280px;
+    }
+    #screen {
+        font-size: 24px;
+    }
+    .buttons button {
+        padding: 15px;
+        font-size: 18px;
+    }
+}
